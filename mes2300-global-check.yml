@@ -67,7 +67,7 @@
       lines:
       - snmp-server server
       - no snmp-server location
-      - snmp-server contact ot@sats.spb.ru;+78125767077
+      - snmp-server contact ***
       - encrypted snmp-server community caOijfcQ+GS/XvRv1bNi+7hyv8HZzoCcUCQ8mXRC+CA= ro 172.31.172.0 mask 255.255.255.0 view Default
       - encrypted snmp-server host 172.31.172.33 traps version 2c caOijfcQ+GS/XvRv1bNi+7hyv8HZzoCcUCQ8mXRC+CA=
       - no logging host 172.31.172.3
