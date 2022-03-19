@@ -38,6 +38,8 @@
     ansible.netcommon.cli_command:
       command: show system
     register: sh_sys
+# If you use the "ios_command" module, then parsing will display an error:
+# "parse_cli_textfsm input should be a string, but was given a input of <class 'list'>".
 
   - name: Check switch series
     set_fact:
@@ -56,8 +58,8 @@
       switch_model[0]["Model"] != "2124F"
 
   - name: Clear schedule
-    ansible.netcommon.cli_command:
-      command: reload cancel
+    ios_command:
+      commands: reload cancel
     register: canc_output
     changed_when: "'Reload cancelled' in canc_output.stdout"
 
@@ -160,15 +162,3 @@
       ios_command:
         commands: boot system inactive-image
     #end block mes21 series
-
-  - name: Save config
-    register: write_out
-    cisco.ios.ios_command:
-      commands:
-      - command: 'write'
-        prompt: 'Overwrite file '
-        answer: 'y'
-#      wait_for:
-#      - result[0] contains 'Copy succeeded'
-#    changed_when: write_out.stdout is search(".*Copy succeeded.*")
-    failed_when: write_out.stdout is not search(".*Copy succeeded.*")
