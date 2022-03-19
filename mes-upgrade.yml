@@ -158,7 +158,7 @@
       changed_when: "'6476145 bytes copied in' in download_output.stdout[0]"
       failed_when: "'6476145 bytes copied in' not in download_output.stdout[0]"
 
-    - name: Get version info
+    - name: Set new image
       ios_command:
         commands: boot system inactive-image
     #end block mes21 series
