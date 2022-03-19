@@ -11,3 +11,7 @@ self.send_command("configure terminal") // "configure terminal" -> "configure"
 self._exec_cli_command(b"terminal lenght 0") // "terminal lenght 0" -> "terminal datadump"
 
 This made it possible to use modules for Eltex.
+
+mes-upgrade.yml - playbook for downloading new firmware images;
+mes-schedule.yml - playbook for restarting switches on a schedule;
+*.textfsm - templates for parsing.
