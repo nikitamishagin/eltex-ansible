@@ -1,10 +1,20 @@
 # Eltex Ansible Project
 
-_I plan to improve this project in the future._
+**PROJECT UNDER DEVELOPMENT**
+
+🚀 Join the effort to build a dedicated Eltex Ansible collection!  
+
+If you work with Eltex network devices and are familiar with Ansible/Python, I invite you to contribute. The plan is a
+phased adaptation of modules from the cisco.ios collection for Eltex devices within the dedicated
+`feature/ansible-collection` branch. Please propose and implement your Eltex-specific adaptations following the roadmap
+below.
+
+I’m happy to receive any suggestions, ideas, and support for creating this collection. Thank you!
+
 
 ## Common plan for improvement
 
-- [ ] Fork the Ansible cisco.ios collection
+- [x] Fork the Ansible cisco.ios collection
 - [ ] Create a list of modules that can be adapted for Eltex
 - [ ] Define the order of the most important modules
 - [ ] Implement the modules in this order
@@ -13,6 +23,14 @@ _I plan to improve this project in the future._
 - [ ] Prepare Ansible playbooks
 
 Ansible Cisco IOS Collection: https://github.com/ansible-collections/cisco.ios
+
+## Progress of improvement
+
+- The improvement plan has been drafted and added to the README.
+- A brief section for contributors has been added.
+- A new branch has been created to evolve the project into an Ansible collection. The branch is named
+  `feature/ansible-collection`. It is currently a copy of the cisco.ios project. All development of the new collection
+  is planned to take place in this branch (as if it were the new main).
 
 ## Old description
 
